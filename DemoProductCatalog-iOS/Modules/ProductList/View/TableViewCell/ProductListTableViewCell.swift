@@ -19,6 +19,9 @@ class ProductListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        if #available(iOS 13.0, *) {
+            imageLoader.style = .large
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {  }

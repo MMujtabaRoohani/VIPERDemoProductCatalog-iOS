@@ -16,6 +16,9 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        if #available(iOS 13.0, *) {
+            imageLoader.style = .large
+        }
     }
     
     override func prepareForReuse() {

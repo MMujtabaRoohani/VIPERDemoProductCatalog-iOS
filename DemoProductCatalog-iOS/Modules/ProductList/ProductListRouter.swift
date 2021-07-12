@@ -9,8 +9,6 @@ import UIKit
 
 class ProductListRouter: ProductListRouterInterface {
     
-    
-    
     let navigationController: UINavigationController
     init(nav: UINavigationController) {
         self.navigationController = nav

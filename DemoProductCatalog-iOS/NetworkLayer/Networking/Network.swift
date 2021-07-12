@@ -72,7 +72,7 @@ final class Network: NSObject {
     public func downloadImage(from url: URL, completion: @escaping (UIImage?, Error?) -> Void) {
         DispatchQueue.global().async {
             let urlRequest = URLRequest(url: url)
-            let task = self.imageDownloadManager.dataTask(with: urlRequest) { (data, response, error) in
+            let task = self.imageDownloadManager.dataTask(with: urlRequest) { (data, _, error) in
                 defer { self.downloadLimit.signal() }
                 guard let data = data,
                       let image = UIImage(data: data) else {

@@ -61,7 +61,10 @@ class ProductDetailPresenter: ProductDetailPresenterInterface {
         for (idx, infoItem) in product.info.enumerated() {
             let modifiedFont = NSString(format: "<span style=\"font-family: -apple-system; font-size: \(15)\">%@</span>" as NSString, infoItem.text) as String
             guard let data = modifiedFont.data(using: String.Encoding.utf16, allowLossyConversion: false),
-                  let attributedString = try? NSMutableAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil) else { continue }
+                  let attributedString = try? NSMutableAttributedString(data: data, options: [
+                        .documentType: NSAttributedString.DocumentType.html,
+                        .characterEncoding: String.Encoding.utf8.rawValue
+                  ], documentAttributes: nil) else { continue }
             
             // To support dark mode, remove the hard-coded color attributes
             attributedString.removeAttribute(.foregroundColor, range: NSRange.init(location: 0, length: attributedString.string.count))

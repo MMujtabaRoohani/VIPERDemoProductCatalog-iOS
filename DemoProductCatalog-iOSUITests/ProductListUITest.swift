@@ -18,9 +18,9 @@ class ProductListUITest: XCTestCase {
     }
 
     func testClickableTableViewCells() throws {
-        self.app.tables.element.cells.element.waitForExistence(timeout: 5)
+        XCTAssert(self.app.tables.element.cells.element.waitForExistence(timeout: 5))
         self.app.tables.element.cells.allElementsBoundByIndex.first?.tap()
-        self.app.navigationBars.element.buttons.element.waitForExistence(timeout: 2)
+        XCTAssert(self.app.navigationBars.element.buttons.element.waitForExistence(timeout: 2))
         self.app.navigationBars.element.buttons.element.tap()
         for _ in 0..<20 {
             self.app.swipeUp(velocity: .fast)

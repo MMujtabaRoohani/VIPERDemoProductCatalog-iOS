@@ -35,8 +35,8 @@ class ProductListPresenterTest: XCTestCase {
         // Interactor will respond synchronously
         XCTAssert(view.reloadCalled == 1)
         XCTAssert(sut.getProductsCount() == 10)
-        for i in 0..<sut.getProductsCount() {
-            let product: BriefProduct? = sut.getProduct(at: i)
+        for idx in 0..<sut.getProductsCount() {
+            let product: BriefProduct? = sut.getProduct(at: idx)
             XCTAssert(product != nil) // Bogus check just to verify that no IndexOutOfBoundException is raised
         }
         

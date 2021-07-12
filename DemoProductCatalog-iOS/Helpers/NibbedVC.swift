@@ -22,8 +22,8 @@ extension NibbedVC where Self: UIViewController {
         // this splits by the dot and uses everything after it, giving "MyViewController"
         let className = fullName.components(separatedBy: ".")[1]
         
-        let vc = Self.init(nibName: className, bundle: Bundle.main)
+        let viewController = Self.init(nibName: className, bundle: Bundle.main)
 
-        return vc
+        return viewController
     }
 }
