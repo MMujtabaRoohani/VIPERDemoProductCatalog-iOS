@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  DemoProductCatalog-iOS
+//
+//  Created by Mujy on 10/07/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = 558_wFvPT327NXWdQg92Yc4hKBMwuLfI3J90
